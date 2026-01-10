@@ -1,0 +1,28 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "description": "backend for monoQuiz",
+  "homepage": "https://github.com/pross99/MonoQuiz#readme",
+  "bugs": {
+    "url": "https://github.com/pross99/MonoQuiz/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pross99/MonoQuiz.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongoose": "^8.21.0"
+  }
+}
