@@ -7,7 +7,5 @@ interface State {
 }
 
 export default createStore<State>({
-    state: () => {
-        user: ''
-    }
+    state: () => ({ user: '' })
 })

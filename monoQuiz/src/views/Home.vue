@@ -1,20 +1,41 @@
 <script lang="ts">
+import Countdown from '@/components/CountdownClock.vue';
+import InformationPane from '@/components/InformationPane.vue';
+
+
+export default {
+    components: {
+        Countdown,
+        InformationPane
+    }
+}
 
 </script>
 
 
 
 <template>
+    <div class="wrapper">
 <div class="background">
-    <div>
-    </div>
+    <Countdown />
+</div>
+<div class="background">
+    <InformationPane />
+</div>
 </div>
 
 </template>
 
 
 <style scoped>
+.wrapper{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(-67deg, rgba(255, 255, 255, 0.4), rgba(246, 247, 249, 0.9));
+}
 .background{
-    background: linear-gradient(-67deg, rgba(223, 124, 19, 0.4), rgba(93, 121, 174, 0.9));
+    border: 1px solid red;
+    width: 50%;
+    
 }
 </style>
