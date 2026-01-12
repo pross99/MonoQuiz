@@ -1,12 +1,14 @@
 <script lang="ts">
 import Countdown from '@/components/CountdownClock.vue';
 import InformationPane from '@/components/InformationPane.vue';
+import SignUpGumball from '@/components/SignUpGumball.vue';
 
 
 export default {
     components: {
         Countdown,
-        InformationPane
+        InformationPane,
+        SignUpGumball
     }
 }
 
@@ -22,8 +24,10 @@ export default {
 <div class="background">
     <InformationPane />
 </div>
-</div>
 
+
+</div>
+<SignUpGumball />
 </template>
 
 
