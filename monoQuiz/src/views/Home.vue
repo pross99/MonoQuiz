@@ -3,6 +3,7 @@ import Countdown from '@/components/CountdownClock.vue';
 import InformationPane from '@/components/InformationPane.vue';
 import SignUpGumball from '@/components/SignUpGumball.vue';
 import Form  from '@/components/Form.vue'
+import TeamListings from '@/components/TeamListings.vue';
 
 
 export default {
@@ -10,7 +11,8 @@ export default {
         Countdown,
         InformationPane,
         SignUpGumball,
-        Form
+        Form,
+        TeamListings
     }
 }
 
@@ -38,6 +40,10 @@ export default {
 </div>
 </div>
 
+<div class="wrapper">
+  <TeamListings />
+</div>
+
 </template>
 
 
@@ -45,10 +51,10 @@ export default {
 .wrapper{
     display: flex;
     justify-content: center;
-    background: linear-gradient(-67deg, rgba(255, 255, 255, 0.4), rgba(246, 247, 249, 0.9));
     background: linear-gradient(-67deg, rgba($third-color, .7), $secondary-color);
 }
 .background{
+  
     width: 50%;
     display: flex;
     justify-content: center;

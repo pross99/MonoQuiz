@@ -1,0 +1,35 @@
+.team-header{
+    width: 100vw;
+
+}
+
+
+.team-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+    gap: 2rem;
+    padding: 0.5rem;
+    overflow: scroll;
+    scrollbar-color: $primary-color transparent;
+    scrollbar-width: thin;
+    border-radius: $border-radius;
+    background-color: rgba($third-color, 0.3);
+}
+
+.team{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-67deg, rgba($primary-color, 1), $secondary-color);
+    border-radius: 20px;
+
+    h4{
+        width: 100%;
+    }
+    flex-wrap: wrap;
+}
+
+.icon{
+    font-size: 42px;
+    width: 100%;
+}

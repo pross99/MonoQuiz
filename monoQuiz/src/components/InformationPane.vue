@@ -5,7 +5,7 @@ export default {}
 <template>
 
 
-    <div>
+    <div class="inf-container">
         <h2>
             Information
         </h2>
@@ -14,3 +14,14 @@ export default {}
         <P> SIGN UP BELOW</P>
     </div>
 </template>
+
+<style scoped lang="scss">
+
+  .inf-container {
+    background-color: $primary-color;
+    margin: 1rem;
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 16px;
+  }
+</style>

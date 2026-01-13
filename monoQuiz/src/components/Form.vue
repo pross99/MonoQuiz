@@ -3,7 +3,7 @@
 
     <div class="header">
 <h3> Sign up now!</h3>
-<p> First mono quiz!</p>
+<p> Join the first mono quiz</p>
 </div>
  <form @submit="checkForm" method="post" novalidate="true">
       <p v-if="errors.length">
@@ -77,7 +77,7 @@
                     if(validEmail) {
                          this.handleFormSubmit(this.formData)
                     } else {
-                        this.errors.push('Mono Email invalid. Contact Peter')
+                        this.errors.push(`${this.formData.email} is invalid. Contact Peter or check typo`)
                     }
                    
                 }
