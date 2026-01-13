@@ -6,6 +6,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { OhVueIcon } from 'oh-vue-icons';
 import Toast from 'vue-toastification';
+import 'vue-toastification/dist/index.css';
 import store from './store'
 
 library.add(fas);

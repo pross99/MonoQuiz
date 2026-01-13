@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <canvas ref="canvas" :width="10000" :height="1000"></canvas>
+    <h2>Signups</h2>
+    <canvas ref="canvas" :width="500" :height="500"></canvas>
   </div>
 </template>
 
@@ -42,12 +43,12 @@ export default defineComponent({
   },
 
  async mounted() {
-  this.initCanvas();
+ 
      if(this.$store.state.users || this.$store.state.users === 0) {
         await this.$store.dispatch('getUsers')
         console.log(this.$store.state.users[0]?.userName)
     }
-    
+     this.initCanvas();
 
    
   },
@@ -111,58 +112,50 @@ export default defineComponent({
     },
 
     animate() {
-      if (this.win_w !== window.innerWidth || this.win_h !== window.innerHeight) {
-        this.win_w = window.innerWidth;
-        this.win_h = window.innerHeight;
-      }
+      const canvas = this.$refs.canvas as HTMLCanvasElement;
+      const canvasWidth = canvas.width;
+      const canvasHeight = canvas.height;
 
       this.animationId = requestAnimationFrame(this.animate);
-      this.ctx!.clearRect(0, 0, this.win_w, this.win_h);
+      this.ctx!.clearRect(0, 0, canvasWidth, canvasHeight);
 
       for (let i = 0; i < this.bal.length; i++) {
         this.bal[i].update();
         this.bal[i].y += this.bal[i].dy;
         this.bal[i].x += this.bal[i].dx;
 
-        if (this.bal[i].y + this.bal[i].radius >= this.win_h) {
+        // Bottom boundary
+        if (this.bal[i].y + this.bal[i].radius >= canvasHeight) {
           this.bal[i].dy = -this.bal[i].dy * this.gravity;
+          this.bal[i].y = canvasHeight - this.bal[i].radius; // Keep within bounds
         } else {
           this.bal[i].dy += this.bal[i].vel;
         }
 
-        if (this.bal[i].x + this.bal[i].radius > this.win_w || 
-            this.bal[i].x - this.bal[i].radius < 0) {
-          this.bal[i].dx = -this.bal[i].dx;
+        // Top boundary
+        if (this.bal[i].y - this.bal[i].radius < 0) {
+          this.bal[i].dy = Math.abs(this.bal[i].dy);
+          this.bal[i].y = this.bal[i].radius;
         }
 
-        if (this.mousex > this.bal[i].x - 20 && 
-            this.mousex < this.bal[i].x + 20 &&
-            this.mousey > this.bal[i].y - 50 &&
-            this.mousey < this.bal[i].y + 50 &&
-            this.bal[i].radius < 70) {
-          this.bal[i].radius += 5;
-        } else {
-          if (this.bal[i].radius > this.bal[i].startradius) {
-            this.bal[i].radius -= 5;
-          }
+        // Side boundaries
+        if (this.bal[i].x + this.bal[i].radius > canvasWidth) {
+          this.bal[i].dx = -Math.abs(this.bal[i].dx);
+          this.bal[i].x = canvasWidth - this.bal[i].radius;
+        } else if (this.bal[i].x - this.bal[i].radius < 0) {
+          this.bal[i].dx = Math.abs(this.bal[i].dx);
+          this.bal[i].x = this.bal[i].radius;
         }
-      }
-    }
   }
-});
+}
+}});
 </script>
 
 <style scoped>
-.container {
-  width: 100vw;
-  height: 800px;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
 
 canvas {
   display: block;
+
 
 }
 </style>

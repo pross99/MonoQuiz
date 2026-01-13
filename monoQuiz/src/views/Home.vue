@@ -2,13 +2,15 @@
 import Countdown from '@/components/CountdownClock.vue';
 import InformationPane from '@/components/InformationPane.vue';
 import SignUpGumball from '@/components/SignUpGumball.vue';
+import Form  from '@/components/Form.vue'
 
 
 export default {
     components: {
         Countdown,
         InformationPane,
-        SignUpGumball
+        SignUpGumball,
+        Form
     }
 }
 
@@ -17,29 +19,43 @@ export default {
 
 
 <template>
-    <div class="wrapper">
-<div class="background">
+<div class="wrapper">
+  <div class="background-countdown">
     <Countdown />
-</div>
-<div class="background">
+  </div>
+  <div class="background">
     <InformationPane />
+  </div>
 </div>
 
-
+<div class="wrapper">
+    <div class="background">
+  <SignUpGumball />
 </div>
-<SignUpGumball />
+
+<div class="background">
+  <Form />
+</div>
+</div>
+
 </template>
 
 
-<style scoped>
+<style scoped lang="scss">
 .wrapper{
     display: flex;
     justify-content: center;
     background: linear-gradient(-67deg, rgba(255, 255, 255, 0.4), rgba(246, 247, 249, 0.9));
+    background: linear-gradient(-67deg, rgba($third-color, .7), $secondary-color);
 }
 .background{
-    border: 1px solid red;
     width: 50%;
+    display: flex;
+    justify-content: center;
     
+}
+.background-countdown{
+    width: 50%;
+    justify-content: center;
 }
 </style>
