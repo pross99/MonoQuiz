@@ -5,13 +5,16 @@ export default {}
 <template>
 
 
-    <div class="inf-container">
+    <div class="form-wrapper">
         <h2>
             Information
         </h2>
-        <p> The quiz will start at TBD and there will be a total of 40(?) questions. The quizz will be in small groups and i will make the teams with the people who have signed up below.</p>
-        <P> There will be a few different categories and these will be kept secret. There will however not be any music related questions</P>
-        <P> SIGN UP BELOW</P>
+        <ul>
+          <li>The teams will be random. I will update the teams below after enough have signed up</li>
+          <li> There will be different categories (no music questions) with a total of 40 questions(?) </li>
+          <li>The quiz will be held at the office Friday {date} 15:30 </li>
+          <li>There will be a small price for the winning team</li>
+        </ul>
     </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
-  <div class="container">
+  <div class="container form-wrapper">
     <h2>Signups</h2>
-    <canvas ref="canvas" :width="500" :height="500"></canvas>
+    <canvas ref="canvas" :width="436" :height="500"></canvas>
   </div>
 </template>
 
@@ -151,11 +151,11 @@ export default defineComponent({
 }});
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 canvas {
   display: block;
-
+  background-color: rgba($third-color, 0.05);
 
 }
 </style>

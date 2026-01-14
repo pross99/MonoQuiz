@@ -51,7 +51,6 @@ export default {
 .wrapper{
     display: flex;
     justify-content: center;
-    background: linear-gradient(-67deg, rgba($third-color, .7), $secondary-color);
 }
 .background{
   

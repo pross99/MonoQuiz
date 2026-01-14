@@ -1,35 +1,190 @@
-.team-header{
-    width: 100vw;
-
+.team-container {
+    width: 100%;
+    padding: 1rem;
 }
 
+.team-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+    
+    h3 {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+}
 
 .team-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
     gap: 2rem;
-    padding: 0.5rem;
-    overflow: scroll;
-    scrollbar-color: $primary-color transparent;
+    padding: 1.5rem;
+    overflow: auto;
+    scrollbar-color: $third-color transparent;
     scrollbar-width: thin;
     border-radius: $border-radius;
-    background-color: rgba($third-color, 0.3);
+    background-color: rgba($third-color, 0.05);
+    
+    // Smooth scrolling
+    scroll-behavior: smooth;
 }
 
-.team{
+.team {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(-67deg, rgba($primary-color, 1), $secondary-color);
-    border-radius: 20px;
-
-    h4{
-        width: 100%;
-    }
     flex-wrap: wrap;
+    padding: 2rem 1.5rem;
+    background: linear-gradient(-67deg, rgba($third-color, .7), $secondary-color);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba($third-color, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    
+    // Hover effect
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba($third-color, 0.35);
+        
+        .icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+    }
+    
+    // Subtle pattern overlay
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.15), transparent);
+        pointer-events: none;
+    }
+    
+    h4 {
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $third-color;
+        margin: 0 0 1rem 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
 }
 
-.icon{
-    font-size: 42px;
+.icon {
+    font-size: 48px;
     width: 100%;
+    text-align: center;
+    color: $third-color;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba($third-color, 0.3));
+}
+
+.team-listing {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.team-listing-name {
+    background: $primary-color;
+    padding: 0.875rem 1rem;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    color: $third-color;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    
+    // Hover effect for team member names
+    &:hover {
+        background: $secondary-color;
+        transform: translateX(5px);
+        box-shadow: 0 4px 8px rgba($third-color, 0.2);
+    }
+    
+    // Optional: Add a little indicator icon
+    &::after {
+        content: '';
+        position: absolute;
+        right: 1rem;
+        color: $third-color;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    &:hover::after {
+        opacity: 0.5;
+    }
+}
+
+// Optional: Different accent variations for each team (keeping your color scheme)
+.team:nth-child(1) {
+    // Team Otter
+    background: linear-gradient(-67deg, rgba($third-color, .7), $secondary-color);
+}
+
+.team:nth-child(2) {
+    // Team Dragon - Slightly more opaque
+    background: linear-gradient(-67deg, rgba($third-color, .8), $secondary-color);
+}
+
+.team:nth-child(3) {
+    // Team Hippo
+    background: linear-gradient(-67deg, rgba($third-color, .65), $secondary-color);
+}
+
+.team:nth-child(4) {
+    // Team Shrimp - Lighter
+    background: linear-gradient(-67deg, rgba($third-color, .6), $secondary-color);
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+    .team-wrapper {
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+    
+    .team {
+        padding: 1.5rem 1rem;
+        
+        h4 {
+            font-size: 1.25rem;
+        }
+    }
+    
+    .icon {
+        font-size: 36px;
+    }
+}
+
+// Animation on load
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.team {
+    animation: fadeInUp 0.6s ease forwards;
+    
+    @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+            animation-delay: #{$i * 0.1}s;
+        }
+    }
 }

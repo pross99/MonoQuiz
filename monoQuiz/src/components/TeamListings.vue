@@ -91,6 +91,6 @@
      </div>
 </template>
 
-<style lang="scss" src="../assets/teamlisting.scss">
+<style lang="scss" src="../assets/teamlisting.scss" scoped>
     
 </style>
