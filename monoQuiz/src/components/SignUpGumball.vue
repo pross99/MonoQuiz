@@ -39,7 +39,26 @@ export default defineComponent({
   },
 
   computed: {
- 
+    activeUsers() {
+      return this.$store.getters.users;
+    }
+  },
+
+  watch: {
+    activeUsers: {
+      handler(newUsers, oldUsers) {
+        if(oldUsers && newUsers.length > oldUsers.length) {
+          const newUserCount = newUsers.length - oldUsers.length;
+
+          for (let i = newUsers.length - newUserCount; i< newUsers.length; i++) {
+            this.bal.push(this.createGumball(newUsers[i]?.userName));
+          }
+        } else if (!oldUsers && newUsers.length > 0) {
+          console.log(newUsers.length, oldUsers)
+        }
+      },
+      deep: true
+    }
   },
 
  async mounted() {
@@ -98,7 +117,7 @@ export default defineComponent({
       this.ctx = canvas.getContext("2d");
       const userName = this.$store.state.users
       // Initialize gumballs
-      for (let i = 0; i < userName.length; i++) {
+      for (let i = 0; i < this.activeUsers.length; i++) {
         this.bal.push(this.createGumball(userName[i]?.userName || 'NAME NOT FOUND'));
       }
 

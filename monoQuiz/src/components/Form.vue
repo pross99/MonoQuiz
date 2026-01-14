@@ -46,7 +46,7 @@
                 },
                 errors: [] as string[],
                 toast : useToast(),
-                monoEmails: ["pero@monosolutions.com","ddl@monosolutions.com","hero@monosolutions.com"]
+                monoEmails: ["pero@monosolutions.com","ddl@monosolutions.com","hero@monosolutions.com","anz@monosolutions.com","bv@monosolutions.com","bm@monosolutions.com","cvl@monosolutions.com","ef@monosolutions.com","ft@monosolutions.com","gw@monosolutions.com","ha@monosolutions.com","jg@monosolutions.com","jk@monosolutions.com","js@monosolutions.com","mgm@monosolutions.com","jn@monosolutions.com","laja@monosolutions.com","mp@monosolutions.com","meb@monosolutions.com","mip@monosolutions.com","rs@monosolutions.com","sk@monosolutions.com","suar@monosolutions.com","tar@monosolutions.com","ter@monosolutions.com"]
             }
         },
 

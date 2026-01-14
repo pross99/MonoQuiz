@@ -57,6 +57,7 @@ export default {
     width: 50%;
     display: flex;
     justify-content: center;
+    align-items: center;
     
 }
 .background-countdown{
