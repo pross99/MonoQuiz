@@ -1,7 +1,9 @@
 <template>
   <div class="container form-wrapper">
-    <h2>Signups</h2>
+    <h2>Mono Peeps</h2>
+    <div class="canvas-container">
     <canvas ref="canvas" :width="436" :height="500"></canvas>
+    </div>
   </div>
 </template>
 
@@ -55,6 +57,7 @@ export default defineComponent({
           }
         } else if (!oldUsers && newUsers.length > 0) {
           console.log(newUsers.length, oldUsers)
+          this.initializeGumballs()
         }
       },
       deep: true
@@ -112,14 +115,20 @@ export default defineComponent({
       };
     },
 
-    initCanvas() {
-      const canvas = this.$refs.canvas as HTMLCanvasElement;
-      this.ctx = canvas.getContext("2d");
-      const userName = this.$store.state.users
-      // Initialize gumballs
+    initializeGumballs() {
+      const userName = this.$store.state.users;
+      this.bal = [];
       for (let i = 0; i < this.activeUsers.length; i++) {
         this.bal.push(this.createGumball(userName[i]?.userName || 'NAME NOT FOUND'));
       }
+    },
+
+    initCanvas() {
+      const canvas = this.$refs.canvas as HTMLCanvasElement;
+      this.ctx = canvas.getContext("2d");
+      
+      // Initialize gumballs
+      this.initializeGumballs()
 
       this.animate();
       
@@ -174,7 +183,14 @@ export default defineComponent({
 
 canvas {
   display: block;
-  background-color: rgba($third-color, 0.05);
+  background: linear-gradient(-67deg, rgba($third-color, .7), $secondary-color);
+  border-radius: 5px;
 
+}
+
+.canvas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>

@@ -29,7 +29,7 @@ export default {
     <InformationPane />
   </div>
 </div>
-
+<hr />
 <div class="wrapper">
     <div class="background">
   <SignUpGumball />
@@ -39,7 +39,7 @@ export default {
   <Form />
 </div>
 </div>
-
+<hr />
 <div class="wrapper">
   <TeamListings />
 </div>
@@ -48,6 +48,11 @@ export default {
 
 
 <style scoped lang="scss">
+
+  hr{
+    width: 10%;
+    color: rgba($third-color,0.4);
+  }
 .wrapper{
     display: flex;
     justify-content: center;
@@ -57,7 +62,6 @@ export default {
     width: 50%;
     display: flex;
     justify-content: center;
-    align-items: center;
     
 }
 .background-countdown{

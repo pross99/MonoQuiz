@@ -1,9 +1,8 @@
 <template>
-<div class="form-wrapper">
+<div class="form-wrapper" id="form-narrow">
 
     <div class="header">
 <h3> Sign up now!</h3>
-<p> Join the first mono quiz</p>
 </div>
  <form @submit="checkForm" method="post" novalidate="true">
       <p v-if="errors.length">

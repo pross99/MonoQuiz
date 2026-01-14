@@ -15,6 +15,7 @@ export default {}
           <li> There will be different categories (no music questions) with a total of 40 questions(?) </li>
           <li>The quiz will be held at the office Friday {date} 15:30 </li>
           <li>There will be a small price for the winning team</li>
+          <li>The quiz will work like most bar quiz-nights</li>
         </ul>
     </div>
 </template>
