@@ -2,14 +2,18 @@
   <div class="container form-wrapper">
     <h2>Mono Peeps</h2>
     <div class="canvas-container">
-    <canvas ref="canvas" :width="436" :height="500"></canvas>
+    <div v-if="isLoading" class="il-spinner">
+                <h1> Server is cold starting...</h1>
+                <PulseLoader />
+    </div>
+    <canvas v-else ref="canvas" :width="436" :height="500"></canvas>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-
+import PulseLoader from 'vue-spinner/src/PulseLoader.vue';
 
 interface Gumball {
   color: string;
@@ -43,6 +47,10 @@ export default defineComponent({
   computed: {
     activeUsers() {
       return this.$store.getters.users;
+    },
+
+    isLoading() {
+      return this.$store.getters.isLoading;
     }
   },
 

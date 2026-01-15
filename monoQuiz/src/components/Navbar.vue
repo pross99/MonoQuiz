@@ -39,7 +39,7 @@ export default {
         </div>
         <div class="main right">
             <div class="right-container">
-                <p>Mono Quiz</p>
+                
             </div>
             
         </div>

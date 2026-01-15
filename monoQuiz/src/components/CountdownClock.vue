@@ -55,15 +55,17 @@
 
 
 <template>
-    <h2>
+  
+<div class="form-wrapper">
+      <h2>
         When? 
     </h2>
-
     <div class="clock" id="clock1">
         <div data-value="days"> {{ displayDays }}</div>
         <div data-value="hours"> {{ displayHours }}</div>
         <div data-value="minutes"> {{ displayMinutes }}</div>
         <div data-value="seconds"> {{ displaySeconds }}</div>
+    </div>
     </div>
 </template>
 

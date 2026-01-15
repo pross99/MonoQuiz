@@ -3,16 +3,16 @@
     display:flex;
     justify-content: center;
     margin: 0 auto;
-    max-width:80%;
+    max-width:100%;
     margin-bottom: 50px;
     div {
            background: linear-gradient(-67deg, rgba($third-color, .1), $secondary-color);
         color: $text-color;
         display:inline-block;
-        padding:2rem;
+        padding: 2rem;
         margin: 0 1rem;
         font-size:2.5rem;
-        width: calc(10% - 2rem);
+        width: calc(10% - 1rem);
         text-align:center;
         font-weight:bold;
         border-radius:5%;
