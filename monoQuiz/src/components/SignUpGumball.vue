@@ -40,7 +40,8 @@ export default defineComponent({
       gravity: 1,
       bal: [] as any,
       animationId: 0,
-      intervalId: 0
+      intervalId: 0,
+      isAnimating: false
     };
   },
 
@@ -71,7 +72,10 @@ export default defineComponent({
   },
     activeUsers: {
       handler(newUsers, oldUsers) {
-        if (!this.$refs.canvas) return;
+
+        if (!this.$refs.canvas || !this.ctx) return;
+
+
         if(oldUsers && newUsers.length > oldUsers.length) {
           const newUserCount = newUsers.length - oldUsers.length;
 
@@ -93,13 +97,30 @@ export default defineComponent({
  
     await this.$store.dispatch('getUsers')
 
-   
+    if (!this.isLoading) {
+  this.$nextTick(() => this.initCanvas());
+}
+
   },
 
   beforeUnmount() {
-    cancelAnimationFrame(this.animationId);
-    clearInterval(this.intervalId);
+
+    this.isAnimating = false;
+
+    if(this.animationId) {
+      cancelAnimationFrame(this.animationId)
+      this.animationId = 0;
+
+    }
+      if (this.intervalId) {
+      clearInterval(this.intervalId);
+      this.intervalId = 0;
+    }
+
     window.removeEventListener('mousemove', this.handleMouseMove);
+    this.ctx = null;
+    this.bal = [];
+
   },
 
   methods: {
@@ -146,11 +167,18 @@ export default defineComponent({
 
     initCanvas() {
       const canvas = this.$refs.canvas as HTMLCanvasElement;
+      if(!canvas) return;
+
+      if(this.animationId) {
+        cancelAnimationFrame(this.animationId);
+        this.animationId = 0;
+      }
       this.ctx = canvas.getContext("2d");
       
       // Initialize gumballs
       this.initializeGumballs()
 
+      this.isAnimating = true;
       this.animate();
       
     },
@@ -161,11 +189,14 @@ export default defineComponent({
     },
 
     animate() {
+        if (!this.isAnimating || !this.$refs.canvas || !this.ctx) {
+        return;
+      }
+
       const canvas = this.$refs.canvas as HTMLCanvasElement;
       const canvasWidth = canvas.width;
       const canvasHeight = canvas.height;
 
-      this.animationId = requestAnimationFrame(this.animate);
       this.ctx!.clearRect(0, 0, canvasWidth, canvasHeight);
 
       for (let i = 0; i < this.bal.length; i++) {
@@ -195,6 +226,10 @@ export default defineComponent({
           this.bal[i].dx = Math.abs(this.bal[i].dx);
           this.bal[i].x = this.bal[i].radius;
         }
+  }
+
+  if(this.isAnimating) {
+    this.animationId = requestAnimationFrame(() => this.animate());
   }
 }
 }});
