@@ -43,22 +43,29 @@ export default {
             <a class="nav-img" href="/home"></a>
         </div>
           <div class="navbarMenu">
-                        <button @click="closeMenu">
-                            <RouterLink to="/" :class="[isActive('/') ? 'active' : 'notActive']">
+                        
+                            <RouterLink to="/">
+                                <button @click="closeMenu" :class="[isActive('/') ? 'active' : 'notActive']">
                                 Home
+                                 </button>
                             </RouterLink>
-                        </button>
+                       
 
-                        <button @click="closeMenu" >
-                            <RouterLink to="/leaderboard" :class="[isActive('/leaderboard') ? 'active' : 'notActive']">
-                               Leaderboard
+                 
+                            <RouterLink to="/leaderboard">
+                                <button @click="closeMenu" :class="[isActive('/leaderboard') ? 'active' : 'notActive']" >
+                               Leaderboard   
+                                </button>
                             </RouterLink>
-                        </button>
-                        <button @click="closeMenu">
-                            <RouterLink to="/images" :class="[isActive('/images') ? 'active' : 'notActive']">
+                       
+                        
+                            <RouterLink to="/images" >
+                                <button @click="closeMenu" :class="[isActive('/images') ? 'active' : 'notActive']">
+                                 
                                Images
+                               </button>
                             </RouterLink>
-                        </button>
+                       
                     </div>
     </nav>
 </template>

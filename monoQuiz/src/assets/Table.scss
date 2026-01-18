@@ -1,0 +1,86 @@
+$color_1: #ffffff;
+$color_2: black;
+$color_3: $secondary-color;
+$color_4: $primary-color;
+$background-color_1: $third-color;
+$background-color_2: $secondary-color;
+$background-color_3: #ffffff;
+
+
+.s-table {
+	width: 100%;
+	border-collapse: collapse;
+	overflow: hidden;
+	height: 75vh;
+	margin-bottom: 20px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+	thead {
+		background-color: rgba($background-color_1, 0.5) ;
+		color: $color_1;
+		text-align: left;
+	}
+
+	th {
+		color: $color_1;
+		border: solid $secondary-color 1px;
+		text-align: center;
+		font-weight: lighter;
+	}
+
+	td {
+		color: $color_1;
+		border: solid rgba($third-color, 0.4) 1px;
+		text-align: center;
+	}
+
+
+	tbody {
+		tr {
+			&:nth-child(odd) {
+				background-color: $background-color_2;
+			}
+
+			&:nth-child(even) {
+				background-color: $background-color_3;
+			}
+		}
+
+		td {
+			color: $color_2;
+		}
+	}
+}
+
+
+
+.sort-btn {
+	background: none;
+	border: none;
+	color: $color_3;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+	margin-left: 0px;
+
+	&:hover {
+		color: $color_4;
+	}
+
+	&:focus {
+		color: $color_4;
+		box-shadow: none;
+	}
+}
+
+
+@media only screen and (max-width: 600px) {
+
+	.sort-btn {
+		display: none;
+	}
+}
+
+    .icon {
+        color: rgba($background-color_1, 0.7);
+    }

@@ -48,9 +48,9 @@
 
 
     button {
-    width: 30%;
+    width: 100%;
   padding: 12px;
-  background-color: rgba($primary-color, .7);
+  background-color: rgba($third-color, .4);
   color: white;
   border: none;
   border-radius: 8px;
@@ -58,15 +58,16 @@
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
-        a {
              &.active {
                 font-weight: bold;
-                color: black;
+                color: $primary-color;
+                background-color: rgba($third-color, .9);
                     }
-        }
+      
     }
 
 }
+
 
 .right-container{
     display: flex;

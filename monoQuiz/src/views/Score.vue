@@ -1,5 +1,14 @@
 <script lang="ts">
-export default {}
+import StatListing from '@/components/StatListing.vue';
+
+export default {
+    components: {
+        StatListing,
+    }
+}
 </script>
 
-<template></template>
+<template>
+
+    <StatListing />
+</template>
