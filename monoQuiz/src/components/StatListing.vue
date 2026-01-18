@@ -7,25 +7,25 @@ export default {
             {
                 "id": 1,
                 "Team": "Otter",
-                "Points": 8,
+                "Points": 0,
                 "icon": "fa-otter"
             },
             {
                 id: 2,
                 "Team": "Dragon",
-                "Points": 10,
+                "Points": 0,
                 "icon": "fa-dragon"
             },
             {
                 id: 3,
                 "Team": "Hippo",
-                "Points": 6,
+                "Points": 0,
                 "icon": "fa-hippo"
             },
             {
                 id:4,
                 "Team": "Shrimp",
-                "Points": 7,
+                "Points": 0,
                 "icon": "fa-shrimp"
             }
         ]
