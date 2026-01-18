@@ -25,7 +25,7 @@ export default createStore<State> ({
             state.users.push(user)
         },
 
-          SET_LOADING(state, loading) {
+        SET_LOADING(state, loading) {
             state.isLoading = loading
         },
      },
@@ -33,6 +33,7 @@ export default createStore<State> ({
      actions: {
         async getUsers({commit, dispatch, state}) {
             if(state.users.length > 0) {
+                commit('SET_LOADING', false);
                 return;
             }
 
@@ -61,6 +62,10 @@ export default createStore<State> ({
      getters: {
         users(state) {
             return state.users.map(usr => usr)
+        },
+
+        isLoading(state) {
+            return state.isLoading
         }
      }
 })

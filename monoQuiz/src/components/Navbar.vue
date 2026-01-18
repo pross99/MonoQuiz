@@ -15,12 +15,17 @@ export default {
     computed: {
         route() {
             return this.$route
+        },
+        isActive() {
+            return (routePath: string) => {
+                return this.$route.path == routePath
+            }
         }
     },
 
     methods: {
-        isActive(routePath: string) {
-            return this.route.path = routePath
+        toggleMenu() {
+           this.isMenuOpen = !this.isMenuOpen
         },
 
         closeMenu() {
@@ -37,12 +42,24 @@ export default {
         <div class="main left">
             <a class="nav-img" href="/home"></a>
         </div>
-        <div class="main right">
-            <div class="right-container">
-                
-            </div>
-            
-        </div>
+          <div class="navbarMenu">
+                        <button @click="closeMenu">
+                            <RouterLink to="/" :class="[isActive('/') ? 'active' : 'notActive']">
+                                Home
+                            </RouterLink>
+                        </button>
+
+                        <button @click="closeMenu" >
+                            <RouterLink to="/leaderboard" :class="[isActive('/leaderboard') ? 'active' : 'notActive']">
+                               Leaderboard
+                            </RouterLink>
+                        </button>
+                        <button @click="closeMenu">
+                            <RouterLink to="/images" :class="[isActive('/images') ? 'active' : 'notActive']">
+                               Images
+                            </RouterLink>
+                        </button>
+                    </div>
     </nav>
 </template>
 

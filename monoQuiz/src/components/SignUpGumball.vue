@@ -1,12 +1,12 @@
 <template>
   <div class="container form-wrapper">
-    <h2>Mono Peeps</h2>
+    <h2>Current signups</h2>
     <div class="canvas-container">
     <div v-if="isLoading" class="il-spinner">
-                <h1> Server is cold starting...</h1>
+                <h1> Waiting for database response..</h1>
                 <PulseLoader />
     </div>
-    <canvas v-else ref="canvas" :width="436" :height="500"></canvas>
+    <canvas v-else ref="canvas" :width="440" :height="500"></canvas>
     </div>
   </div>
 </template>
@@ -50,13 +50,28 @@ export default defineComponent({
     },
 
     isLoading() {
+      console.log(this.$store.getters.isLoading)
       return this.$store.getters.isLoading;
     }
   },
 
   watch: {
+      // function to ensure canvas is rendered before call its related functions
+
+      isLoading: {
+         handler(newVal) {
+
+        if (!newVal) {
+            this.$nextTick(() => {
+                this.initCanvas();
+          });
+        }
+     },
+     immediate: false
+  },
     activeUsers: {
       handler(newUsers, oldUsers) {
+        if (!this.$refs.canvas) return;
         if(oldUsers && newUsers.length > oldUsers.length) {
           const newUserCount = newUsers.length - oldUsers.length;
 
@@ -69,16 +84,14 @@ export default defineComponent({
         }
       },
       deep: true
-    }
-  },
+    },
+
+  
+},
 
  async mounted() {
  
-     if(this.$store.state.users || this.$store.state.users === 0) {
-        await this.$store.dispatch('getUsers')
-        console.log(this.$store.state.users[0]?.userName)
-    }
-     this.initCanvas();
+    await this.$store.dispatch('getUsers')
 
    
   },
