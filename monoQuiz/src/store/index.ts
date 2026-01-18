@@ -39,7 +39,7 @@ export default createStore<State> ({
 
             commit('SET_LOADING', true);
             try {
-                const userResponse = await axios.get('/api/user')
+                const userResponse = await axios.get('https://monoquiz.onrender.com/api/user')
                 console.log("users", userResponse)
                 commit('SET_USERS', userResponse.data)
             } catch(error) {
@@ -54,7 +54,7 @@ export default createStore<State> ({
                 userName: formData.userName
             };
                  console.log(newUser)
-            const response = await axios.post('/api/user', newUser)
+            const response = await axios.post('https://monoquiz.onrender.com/api/user', newUser)
             commit('ADD_USER', response.data)
             return response.data;
         }
