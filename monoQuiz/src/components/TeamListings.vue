@@ -1,5 +1,4 @@
 <script lang="ts">
-    import Team from '@/components/Team.vue';
     export default {
     }
 </script>
