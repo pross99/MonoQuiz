@@ -66,7 +66,11 @@
         <div data-value="minutes"> {{ displayMinutes }}</div>
         <div data-value="seconds"> {{ displaySeconds }}</div>
     </div>
-       <pre> 30/1/2026 15:30</pre>
+      
+    </div>
+
+      <div class="form-wrapper">
+     <pre> 30/1/2026 15:30</pre>
     </div>
     
 </template>

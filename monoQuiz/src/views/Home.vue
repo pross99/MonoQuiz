@@ -22,7 +22,7 @@ export default {
 
 <template>
 <div class="wrapper">
-  <div class="background">
+  <div class="background" id="column-background">
     <Countdown />
   </div>
   <div class="background">
@@ -108,6 +108,12 @@ export default {
     justify-content: center;
      box-sizing: border-box;
     
+}
+
+#column-background {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .background-countdown{
   margin: 1rem;

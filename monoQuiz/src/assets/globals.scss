@@ -3,7 +3,7 @@
  $primary-color: #fff;
  $secondary-color: #f6f7f9;
  $third-color: #0723ce;
- $font-stack: 'Circular Std', 'sans-serif';
+ $font-stack: 'Circular Std';
  $border-radius: 10px;
  $text-color: #2d2d2d;
 
@@ -13,6 +13,7 @@ body {
   width: 100vw;
   margin: 0;
   overflow-x: hidden;
+  line-height: 1.5;
 }
 
 #app {
@@ -31,8 +32,9 @@ h6 {
   font-size: clamp(0.8rem, 3.0vw, 2rem);
   font-weight: 700;
   color: $text-color;
+  line-height: 1;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 4rem;
 }
 
 p,
@@ -51,7 +53,9 @@ li {
 }
 
 pre {
-  font-size: clamp(0.7rem, 0.8vw, 1.4rem);
+  font-size: clamp(1rem, 1.5vw, 2rem);
+  text-align: center;
+  margin: 0;
 }
 
 th,
