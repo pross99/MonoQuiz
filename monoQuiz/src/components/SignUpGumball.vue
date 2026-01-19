@@ -1,6 +1,6 @@
 <template>
   <div class="container form-wrapper">
-    <h2>Current signups</h2>
+    <h3>Who</h3>
     <div class="canvas-container">
     <div v-if="isLoading" class="il-spinner">
                 <h1> Waiting for database response..</h1>

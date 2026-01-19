@@ -44,7 +44,6 @@ export default {
 
  <template>
   <div class="s-container">
-    <h2>Points</h2>
     <table class="s-table">
       <thead>
         <tr>

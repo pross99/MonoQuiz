@@ -7,7 +7,7 @@ export default {}
 
     <div class="form-wrapper">
         <h2>
-            Information
+            What
         </h2>
         <ul>
           <li>The teams will be random. I will update the teams below after enough have signed up</li>
