@@ -95,6 +95,7 @@ export default {
 .wrapper{
     display: flex;
     justify-content: center;
+      
 }
 
 .wrapper:nth-child(1) {

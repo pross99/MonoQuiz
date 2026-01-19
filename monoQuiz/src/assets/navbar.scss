@@ -1,43 +1,64 @@
-
-
-.nav{
+.nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    height:clamp(50px,100px,80px);
+    height: 90px;
     background: linear-gradient(-67deg, rgba($third-color, .7), $secondary-color);
-
-    .main{
+    
+    .main {
         display: flex;
         flex: 1;
         height: 100%;
         width: 100%;
         box-sizing: border-box;
         align-items: center;
+        flex-wrap: wrap;
+        
+        @media (max-width: 768px) {
+            flex-direction: column;
+            height: auto;
+        }
     }
-
+    
     .main-left {
         display: flex;
+        
+        @media (max-width: 768px) {
+            width: 100%;
+            justify-content: center;
+        }
     }
 }
 
-.nav-img{
+.nav-img {
     background-image: url('https://www.monosolutions.com/uploads/qPdXJBxF/MonoLogo.svg');
     width: 90px;
-  min-width: 80px;
-  height: 60px;
-  min-height: 40px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  opacity: .8;
-  margin: 10px 30px;
+    min-width: 80px;
+    height: 60px;
+    min-height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: .8;
+    margin: 10px 30px;
+    
+    @media (max-width: 768px) {
+        margin: 10px 15px;
+        width: 70px;
+        height: 50px;
+    }
 }
 
-.right{
+.right {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
+    
+    @media (max-width: 768px) {
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
 }
 
 .navbarMenu {
@@ -49,46 +70,91 @@
     align-items: center;
     background-color: rgba($primary-color, 0.65);
     height: 100%;
-
-
-    button {
-    width: 100%;
-  padding: 12px;
-  background-color: rgba($third-color, .4);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-             &.active {
-                font-weight: bold;
-                color: $primary-color;
-                background-color: rgba($third-color, .9);
-                    }
-      
+    
+    @media (max-width: 1200px) {
+        margin-right: 50px;
+        width: auto;
+        flex: 1;
+        gap: 0.5rem;
     }
-
+    
+    @media (max-width: 768px) {
+        margin-right: 0;
+        width: 100%;
+        padding: 10px;
+        height: auto;
+        flex-wrap: wrap;
+    }
+    
+    @media (max-width: 480px) {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    button {
+        width: 100%;
+        padding: 12px;
+        background-color: rgba($third-color, .4);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+        
+        @media (max-width: 1200px) {
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            padding: 8px 12px;
+            font-size: 0.85rem;
+        }
+        
+        &.active {
+            font-weight: bold;
+            color: $primary-color;
+            background-color: rgba($third-color, .9);
+        }
+    }
 }
 
-
-.right-container{
+.right-container {
     display: flex;
     justify-content: center;
     flex-basis: 30%;
     align-items: center;
     height: 70%;
-  padding: 16px 32px;
-  border: none;
-  -webkit-appearance: none;
-  transition: all 240ms ease-out;
-  width: 100%;
-
+    padding: 16px 32px;
+    border: none;
+    -webkit-appearance: none;
+    transition: all 240ms ease-out;
+    width: 100%;
+    
+    @media (max-width: 1200px) {
+        flex-basis: auto;
+        padding: 12px 16px;
+    }
+    
+    @media (max-width: 768px) {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
 }
 
 #henrik {
-  height: 90px;
-  width: 90px;
-  padding-bottom: 10px;
+    height: 90px;
+    width: 90px;
+    @media (max-width: 768px) {
+        height: 70px;
+        width: 70px;
+    }
+    
+    @media (max-width: 480px) {
+        height: 60px;
+        width: 60px;
+    }
 }
