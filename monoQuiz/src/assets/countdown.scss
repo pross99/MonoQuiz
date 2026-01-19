@@ -59,3 +59,12 @@
         }
     }
 }
+
+pre {
+    background: linear-gradient(-67deg, rgba($third-color, .1), $secondary-color);
+        color: $text-color;
+}
+
+#wrapper-no-padding{
+    padding-bottom: 0;
+}

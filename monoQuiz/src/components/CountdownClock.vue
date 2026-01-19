@@ -69,7 +69,7 @@
       
     </div>
 
-      <div class="form-wrapper">
+      <div class="form-wrapper" id="wrapper-no-padding">
      <pre> 30/1/2026 15:30</pre>
     </div>
     
