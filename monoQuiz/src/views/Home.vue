@@ -35,8 +35,8 @@ export default {
 <div class="wrapper">
     <div class="background">
   <SignUpGumball />
-</div>
 
+</div>
 <div class="background">
   <Form />
 </div>
@@ -48,6 +48,8 @@ export default {
 <div class="wrapper">
   <TeamListings />
 </div>
+
+
 
 </template>
 
@@ -115,4 +117,5 @@ export default {
   padding: 0px 50px 50px 50px;
   box-shadow: 0 8px 16px rgba($third-color, 0.2);
 }
+
 </style>

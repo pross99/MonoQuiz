@@ -39,8 +39,11 @@ export default {
 
 <template>
     <nav class="nav">
+       
         <div class="main left">
+              
             <a class="nav-img" href="/home"></a>
+            <img id="henrik" src="../assets/img/Henrik.png"/>
         </div>
           <div class="navbarMenu">
                         
@@ -65,8 +68,10 @@ export default {
                                Images
                                </button>
                             </RouterLink>
+                              
                        
                     </div>
+                   
     </nav>
 </template>
 

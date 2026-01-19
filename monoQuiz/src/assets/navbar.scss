@@ -15,6 +15,10 @@
         box-sizing: border-box;
         align-items: center;
     }
+
+    .main-left {
+        display: flex;
+    }
 }
 
 .nav-img{
@@ -81,4 +85,10 @@
   transition: all 240ms ease-out;
   width: 100%;
 
+}
+
+#henrik {
+  height: 90px;
+  width: 90px;
+  padding-bottom: 10px;
 }
