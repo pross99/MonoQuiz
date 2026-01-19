@@ -37,7 +37,7 @@ export default {
   <SignUpGumball />
 
 </div>
-<div class="background">
+<div class="background" id="form-background">
   <Form />
 </div>
 </div>
@@ -124,6 +124,13 @@ export default {
    width: 50%;
   padding: 0px 50px 50px 50px;
   box-shadow: 0 8px 16px rgba($third-color, 0.2);
+}
+
+#form-background {
+  background: linear-gradient(-67deg, rgba($third-color, .3), $secondary-color);
+  margin-top: -3px;
+  margin-bottom: 3px;
+  padding: 1rem;
 }
 
 </style>
