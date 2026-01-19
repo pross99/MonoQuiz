@@ -16,6 +16,7 @@ export default {}
           <li>The quiz will be held at the office</li>
           <li>There will be a small price for the winning team</li>
           <li>The quiz will work like most pub-quiz</li>
+          <li style="font-weight: bold;">Sign up below if you plan to join</li>
         </ul>
     </div>
 </template>
