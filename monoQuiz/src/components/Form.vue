@@ -4,7 +4,7 @@
     <div class="header">
 <h3> Sign up now!</h3>
 </div>
- <form @submit="checkForm" method="post" novalidate="true">
+ <form @submit="checkForm" method="post" novalidate="true" ref="form">
       <p v-if="errors.length">
         <b> Please correct the following error(s): </b>
         <ul>
@@ -15,6 +15,7 @@
     <div class="input-group">
         <label>First name</label>
         <input type="text" id="nameInput" placeholder="Peter" :required="true"
+        ref="name"
         v-model="formData.userName">
     </div>
 
@@ -24,6 +25,7 @@
          id="emailInput"
          placeholder="pero@monosolutions.com"
          :required="true"
+         ref="email"
          v-model="formData.email">
     </div>
 
@@ -59,9 +61,13 @@
                 if(!this.formData.email) {
                     this.errors.push('Please enter your mono email')
                 }
+
+                if(this.formData.userName.length > 20) {
+                    this.errors.push("Please use a shorter name")
+                    return
+                }
                 
                 this.monoEmails.forEach(email => {
-                    console.log(email)
                     if(email === this.formData.email ) {
                         validEmail = true
                     } 
@@ -75,7 +81,9 @@
                 ) {
                     if(validEmail) {
                          this.handleFormSubmit(this.formData)
-                    } else {
+                    } 
+
+                     else {
                         this.errors.push(`${this.formData.email} is invalid. Contact Peter or check typo`)
                     }
                    
@@ -83,21 +91,22 @@
                
 
               
-
                 error.preventDefault();
             },
              async handleFormSubmit(formData: {}) {
+                
         try {
-            const newUser = await this.$store.dispatch('addUser', formData)
+            const newUser = await this.$store.dispatch('addUser', formData);
+            
             this.$emit('add', newUser)
-
-            this.toast.success("Signup confirmed!")
-        } catch( error) {
+            this.toast.success("Signup confirmed!");
+            (this.$refs.form as HTMLFormElement).reset();
+            } catch( error) {
             this.toast.error("Error updating listing")
             console.error(error)
+            }
         }
     }
-        }
     }
 </script>
 
