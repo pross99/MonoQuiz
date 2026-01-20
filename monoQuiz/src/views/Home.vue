@@ -95,6 +95,7 @@ export default {
 .wrapper{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
       
 }
 
@@ -108,7 +109,9 @@ export default {
     justify-content: center;
     align-items: center;
      box-sizing: border-box;
-    
+     @media (max-width: 768px) {
+            width: 100%;
+        }
 }
 
 #column-background {
