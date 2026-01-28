@@ -1,7 +1,7 @@
 import {createRouter,createWebHistory} from "vue-router"
 import Home from "@/views/Home.vue"
 import Score from "@/views/Score.vue"
-import Images from "@/views/images.vue"
+import Images from "@/views/Images.vue"
 
 const router = createRouter ({
     history: createWebHistory(import.meta.env.BASE_URL),

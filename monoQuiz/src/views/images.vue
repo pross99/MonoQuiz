@@ -1,5 +1,15 @@
 <script lang="ts">
-export default {}
+    import Images from '@/components/Images.component.vue';
+
+
+export default {
+    components: {
+        Images
+    }
+}
+
 </script>
 
-<template></template>
+<template>
+        <Images />
+</template>

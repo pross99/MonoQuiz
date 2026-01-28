@@ -8,7 +8,7 @@
 
    
     <div class="team-header">
-         <h3> TEAMS (TBD...)</h3>
+         <h3> TEAMS</h3>
     </div>
    
 
@@ -18,13 +18,13 @@
             <fa class="icon" icon="fa-otter" />
             <div class="team-listing">
                 <div class="team-listing-name">
-                    TBD
+                    Marian
                 </div>
                 <div class="team-listing-name">
-                    TBD
+                    Bence
                 </div>
                 <div class="team-listing-name">
-                    TBD
+                    Henrik
                 </div>
                 <div class="team-listing-name">
                     TBD
@@ -36,13 +36,13 @@
             <fa class="icon" icon="fa-dragon" />
             <div class="team-listing">
                 <div class="team-listing-name">
-                    TBD
+                    Jeremy
                 </div>
                 <div class="team-listing-name">
-                    TBD
+                    Joakim
                 </div>
                 <div class="team-listing-name">
-                    TBD
+                    Tuncay
                 </div>
                 <div class="team-listing-name">
                     TBD
@@ -54,13 +54,13 @@
             <fa class="icon" icon="fa-hippo" />
             <div class="team-listing">
                 <div class="team-listing-name">
-                    TBD
+                    Chris
                 </div>
                 <div class="team-listing-name">
-                    TBD
+                    Bianca
                 </div>
                 <div class="team-listing-name">
-                    TBD
+                    Michal
                 </div>
                 <div class="team-listing-name">
                     TBD
@@ -72,13 +72,13 @@
             <fa class="icon" icon="fa-shrimp" />
             <div class="team-listing">
                 <div class="team-listing-name">
-                    TBD
+                    Anna
                 </div>
                 <div class="team-listing-name">
-                    TBD
+                    Surbhi
                 </div>
                 <div class="team-listing-name">
-                    TBD
+                    Davide
                 </div>
                 <div class="team-listing-name">
                     TBD
