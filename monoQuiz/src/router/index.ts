@@ -16,11 +16,11 @@ const router = createRouter ({
             name: 'leaderboard',
             component: Score
         },
-        {
+    /*     {
             path: '/images',
             name: 'images',
             component: Images
-        }
+        } */
 
 
     ]
