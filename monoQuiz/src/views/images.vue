@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Images from '@/components/Images.component.vue';
+    // import Images from '@/components/Images.component.vue';
 
 
 export default {
