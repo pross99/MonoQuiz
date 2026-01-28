@@ -3,9 +3,9 @@
 
 
 export default {
-/*     components: {
-        Images
-    } */
+    components: {
+      //  Images
+    } 
 }
 
 </script>
