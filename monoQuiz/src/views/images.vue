@@ -3,13 +3,13 @@
 
 
 export default {
-    components: {
+/*     components: {
         Images
-    }
+    } */
 }
 
 </script>
 
 <template>
-        <Images />
+    <!-- <Images /> --> 
 </template>

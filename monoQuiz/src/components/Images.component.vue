@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
    const images = import.meta.glob('../assets/img/*', { eager: true });
 </script>
 
@@ -101,4 +101,4 @@
     </div>
 </template>
 
-<style lang="scss" src="../assets/teamlisting.scss"></style>
+<style lang="scss" src="../assets/teamlisting.scss"></style> -->
