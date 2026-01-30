@@ -57,7 +57,7 @@ export default {
 <style scoped lang="scss">
 
   hr{
-    width: 10%;
+    width: 5%;
     color: rgba($third-color,0.4);
     display: flex;
     justify-content: center;
