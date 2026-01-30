@@ -36,7 +36,7 @@
             <fa class="icon" icon="fa-dragon" />
             <div class="team-listing">
                 <div class="team-listing-name">
-                    Jeremy
+                    TBD
                 </div>
                 <div class="team-listing-name">
                     Joakim
@@ -45,7 +45,7 @@
                     Tuncay
                 </div>
                 <div class="team-listing-name">
-                    TBD
+                    Michal
                 </div>  
             </div>
         </div>
@@ -54,13 +54,13 @@
             <fa class="icon" icon="fa-hippo" />
             <div class="team-listing">
                 <div class="team-listing-name">
-                    Chris
+                    TBD
                 </div>
                 <div class="team-listing-name">
-                    Bianca
+                    TBD
                 </div>
                 <div class="team-listing-name">
-                    Michal
+                    TBD
                 </div>
                 <div class="team-listing-name">
                     TBD
@@ -81,7 +81,7 @@
                     Davide
                 </div>
                 <div class="team-listing-name">
-                    TBD
+                    Chris
                 </div>  
             </div>
         </div>
