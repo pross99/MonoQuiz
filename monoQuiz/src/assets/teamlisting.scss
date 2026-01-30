@@ -204,3 +204,39 @@
         }
     }
 }
+
+.award-icon {
+   position: absolute;
+   top: 0.2rem;
+   right: 1rem;
+   font-size: 2rem;
+   color: gold;
+}
+
+
+.glitter {
+    display: block;
+    z-index: 1;
+  width: 22px;
+  height: 28px;
+  position: absolute;
+  opacity: 0;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAcCAYAAABlL09dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMC1jMDAwIDc5LjE3MWMyN2ZhYiwgMjAyMi8wOC8xNi0yMjozNTo0MSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI0LjAgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjFCRDUxRjEyNzI5OTExRURBOEYyQjMxN0MyRUI1Qjc5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjFCRDUxRjEzNzI5OTExRURBOEYyQjMxN0MyRUI1Qjc5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MUJENTFGMTA3Mjk5MTFFREE4RjJCMzE3QzJFQjVCNzkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MUJENTFGMTE3Mjk5MTFFREE4RjJCMzE3QzJFQjVCNzkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5S+dU8AAAGkElEQVR42oRW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);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.glitter:nth-child(1) { left: 10%; }
+.glitter:nth-child(2) { left: 20%; }
+.glitter:nth-child(3) { left: 25%; }
+.glitter:nth-child(4) { left: 28%; }
+.glitter:nth-child(5) { left: 30%; }
+.glitter:nth-child(6) { left: 38%; }
+.glitter:nth-child(7) { left: 40%; }
+.glitter:nth-child(8) { left: 60%; }
+.glitter:nth-child(9) { left: 68%; }
+.glitter:nth-child(10) { left: 72%; }
+.glitter:nth-child(11) { left: 80%; }
+.glitter:nth-child(12) { left: 85%; }
+.glitter:nth-child(13) { left: 90%; }
+.glitter:nth-child(14) { left: 97%; }
